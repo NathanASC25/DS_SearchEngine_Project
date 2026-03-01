@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         Library library = new Library();
         LibrarySerializer serializer = new LibrarySerializer();
-
+        // In case books list is null, load books data
         List<Book> books = serializer.loadLibrary("src/resources/data/library.ser");
         if (books != null) {
             library.setBooks(books);
@@ -21,7 +21,7 @@ public class Main {
         LibraryMenu menu = new LibraryMenu(library);
 
         menu.displayMenu();
-
+        // Save books data after program interaction ends
         serializer.saveLibrary(library.getBooks(), "src/resources/data/library.ser");
         System.out.println("Library saved successfully to src/resources/data/library.ser");
     }

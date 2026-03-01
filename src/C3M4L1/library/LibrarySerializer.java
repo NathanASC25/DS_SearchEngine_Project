@@ -7,7 +7,7 @@ import java.io.FileNotFoundException;
 //import C3M4L1.Book;
 
 public class LibrarySerializer {
-
+    // Serialization method to preserve books data
     public void saveLibrary(List<Book> books, String fileName) {
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(fileName))) {
                             // TODO - missing code
@@ -16,6 +16,7 @@ public class LibrarySerializer {
             e.printStackTrace();
         }
     }
+    // Deserialization method to process binary to text data
     @SuppressWarnings("unchecked")
     public List<Book> loadLibrary(String fileName) {
         File file = new File(fileName);

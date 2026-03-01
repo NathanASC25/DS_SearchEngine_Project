@@ -10,7 +10,7 @@ import java.util.List;
 
 public class Library {
     private List<Book> books = new ArrayList<>();
-
+    // Capturing book data per line in text file
     public void loadBooks(String fileName) {
         try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
             String line;

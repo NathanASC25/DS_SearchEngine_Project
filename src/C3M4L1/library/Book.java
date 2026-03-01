@@ -1,7 +1,7 @@
 package C3M4L1.library;
 
 import java.io.Serializable;
-
+// Implement serializable interface to allow serialization of objects
 public class Book implements Serializable {
     private String title;
     private String author;

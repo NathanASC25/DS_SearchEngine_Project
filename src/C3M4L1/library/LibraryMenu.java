@@ -24,7 +24,7 @@ public class LibraryMenu {
             library.loadBooks("src/resources/data/books.txt");
         }
     }
-
+    // Interactive display
     public void displayMenu() {
         Scanner scanner = new Scanner(System.in);
         while (true) {
